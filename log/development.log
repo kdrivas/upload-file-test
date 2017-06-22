@@ -1,0 +1,154 @@
+Started GET "/" for 127.0.0.1 at 2017-06-21 22:49:43 -0500
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.1) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (91.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (145.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateResults (20170622033122)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (100.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (95.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateResults (20170622033122)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "results" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "file_file_name" varchar, "file_content_type" varchar, "file_file_size" integer, "file_updated_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170622033122"]]
+  [1m[35m (102.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-06-22 04:01:49.833474"], ["updated_at", "2017-06-22 04:01:49.833474"]]
+  [1m[35m (64.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-06-21 23:15:08 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/seyco/.rvm/gems/ruby-2.4.0@SICAL/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/seyco/.rvm/gems/ruby-2.4.0@SICAL/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 21ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/results/new" for 127.0.0.1 at 2017-06-21 23:15:13 -0500
+Processing by ResultsController#new as HTML
+  Rendering results/new.html.erb within layouts/application
+  Rendered results/new.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 995ms (Views: 982.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/results" for 127.0.0.1 at 2017-06-21 23:15:20 -0500
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lLrlWu7aOalNz6aVl43J2+LVE+1IKGRmT0WOKLzMZ8CQcROAjmAGzav5rPZ86/6lWZIsB0z8kES4JvORSCJ+1Q==", "result"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x007f8324a588a0 @tempfile=#<Tempfile:/tmp/RackMultipart20170621-18541-k9dytk.jpg>, @original_filename="13457775_10206505043169311_1327925545_n.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"result[file]\"; filename=\"13457775_10206505043169311_1327925545_n.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Guardar"}
+Command :: file -b --mime '/tmp/a64f42162e79c6366d13a56f34c0e79620170621-18541-3ks4b7.jpg'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/a64f42162e79c6366d13a56f34c0e79620170621-18541-yow50g.jpg'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering results/new.html.erb within layouts/application
+  Rendered results/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 118ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/results" for 127.0.0.1 at 2017-06-21 23:15:27 -0500
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dKJIA6aQuglZ6Qhkhkxy/lcSnhb8F9Lfa5t1n6VrlcFwab7ZxiqFbb/fAgdtKkWA7FWh/PjDJv2c+AgmUYWM1A==", "result"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x007f83140d6df0 @tempfile=#<Tempfile:/tmp/RackMultipart20170621-18541-uhdrg4.png>, @original_filename="Captura de pantalla de 2016-05-28 19-01-13.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"result[file]\"; filename=\"Captura de pantalla de 2016-05-28 19-01-13.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Guardar"}
+Command :: file -b --mime '/tmp/1e180066e5d9b7a331784b5602569b4f20170621-18541-1ieging.png'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/1e180066e5d9b7a331784b5602569b4f20170621-18541-9pnlvx.png'
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "results" ("file_file_name", "file_content_type", "file_file_size", "file_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["file_file_name", "Captura_de_pantalla_de_2016-05-28_19-01-13.png"], ["file_content_type", "image/png"], ["file_file_size", 364140], ["file_updated_at", "2017-06-22 04:15:27.604163"], ["created_at", "2017-06-22 04:15:27.611335"], ["updated_at", "2017-06-22 04:15:27.611335"]]
+  [1m[35m (94.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/results
+Completed 302 Found in 107ms (ActiveRecord: 94.6ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-06-21 23:15:27 -0500
+Processing by ResultsController#index as HTML
+  Rendering results/index.html.erb within layouts/application
+  [1m[36mResult Load (0.2ms)[0m  [1m[34mSELECT "results".* FROM "results"[0m
+  Rendered results/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents/1/download" for 127.0.0.1 at 2017-06-21 23:18:21 -0500
+Processing by ResultsController#download as HTML
+  Parameters: {"authenticity_token"=>"7keTbrF2niCreVxAxtH7jfmLpkVYNOIj2sp5SAq5LBHqjGW00cyhRE1PViMtt8zzQsyZr1zgFgEtqQTx/lc1BA==", "id"=>"1"}
+  [1m[36mResult Load (0.2ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Sent file /home/seyco/Descargas/app/results/results/1/Captura_de_pantalla_de_2016-05-28_19-01-13.png (0.1ms)
+Completed 200 OK in 15ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/documents/1/download" for 127.0.0.1 at 2017-06-21 23:18:26 -0500
+Processing by ResultsController#download as HTML
+  Parameters: {"authenticity_token"=>"7keTbrF2niCreVxAxtH7jfmLpkVYNOIj2sp5SAq5LBHqjGW00cyhRE1PViMtt8zzQsyZr1zgFgEtqQTx/lc1BA==", "id"=>"1"}
+  [1m[36mResult Load (0.2ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Sent file /home/seyco/Descargas/app/results/results/1/Captura_de_pantalla_de_2016-05-28_19-01-13.png (0.1ms)
+Completed 200 OK in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-06-21 23:24:49 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ResultsController#index as HTML
+  Rendering results/index.html.erb within layouts/application
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results"[0m
+  Rendered results/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 129ms (Views: 114.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/documents/1/download" for 127.0.0.1 at 2017-06-21 23:27:05 -0500
+Processing by ResultsController#download as HTML
+  Parameters: {"authenticity_token"=>"L6PoQ8F8dw48xFuG13i5UjeK99Rc1FAt6xu0VO0mzbEraB6ZocZIatryUeU8Ho4sjM3IPlgApA8ceMntGcjUpA==", "id"=>"1"}
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Sent file /home/seyco/Descargas/upload-file-test/results/results/1/Captura_de_pantalla_de_2016-05-28_19-01-13.png (0.1ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-06-21 23:27:06 -0500
+Processing by ResultsController#index as HTML
+  Rendering results/index.html.erb within layouts/application
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results"[0m
+  Rendered results/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+
+

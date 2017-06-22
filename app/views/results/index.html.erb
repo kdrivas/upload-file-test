@@ -1,0 +1,5 @@
+<% @results.each do |d| %>
+  <%=d.file%>
+  <%=link_to "Des", download_path(d.id), :method => :get%>
+<% end %>
+<%=link_to "crear", 
