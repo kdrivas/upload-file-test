@@ -152,3 +152,44 @@ Processing by ResultsController#index as HTML
 Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/results" for 127.0.0.1 at 2017-06-21 23:34:23 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ResultsController#index as HTML
+  Rendering results/index.html.erb within layouts/application
+  [1m[36mResult Load (0.2ms)[0m  [1m[34mSELECT "results".* FROM "results"[0m
+  Rendered results/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 133ms (Views: 119.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-06-21 23:36:16 -0500
+Processing by ResultsController#index as HTML
+  Rendering results/index.html.erb within layouts/application
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results"[0m
+  Rendered results/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-06-21 23:36:18 -0500
+Processing by ResultsController#index as HTML
+  Rendering results/index.html.erb within layouts/application
+  [1m[36mResult Load (0.2ms)[0m  [1m[34mSELECT "results".* FROM "results"[0m
+  Rendered results/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-06-21 23:37:03 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ResultsController#index as HTML
+  Rendering results/index.html.erb within layouts/application
+  [1m[36mResult Load (0.2ms)[0m  [1m[34mSELECT "results".* FROM "results"[0m
+  Rendered results/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 131ms (Views: 118.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/results/new" for 127.0.0.1 at 2017-06-21 23:37:04 -0500
+Processing by ResultsController#new as HTML
+  Rendering results/new.html.erb within layouts/application
+  Rendered results/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
